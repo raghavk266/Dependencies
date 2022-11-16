@@ -1,3 +1,4 @@
+    implementation("androidx.room:room-paging:2.5.0-beta02")
 # Dependencies
 
 Retrofit:
@@ -47,4 +48,25 @@ implementation("androidx.fragment:fragment-ktx:$fragment_version")
 //Coroutines
     
 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+def room_version = "2.4.3"
+
+implementation("androidx.room:room-runtime:$room_version")
+
+annotationProcessor("androidx.room:room-compiler:$room_version")
+
+// To use Kotlin annotation processing tool (kapt)
     
+kapt("androidx.room:room-compiler:$room_version")
+    
+// To use Kotlin Symbol Processing (KSP)
+    
+ksp("androidx.room:room-compiler:$room_version")
+
+// optional - Kotlin Extensions and Coroutines support for Room
+   
+implementation("androidx.room:room-ktx:$room_version")
+
+Paging
+
+implementation("androidx.room:room-paging:2.5.0-beta02")
